@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/add" method="POST">
+    <input type="text" name="skill">
+    <button>추가</button>
+</form>
+
+<ul>
+{% for skill in skills %}
+    <li>
+    {% if skill == "python" %}
+        [backend] {{ skill }}
+    {% elif skill == "sql" %}
+        [DB] {{ skill }}
+    {% elif skill == "html" %}
+        {{ skill }}
+    {% elif skill == "bash" %}
+        {{ skill }}
+    {% else %}
+        [ETC] {{ skill }}
+    {% endif %}
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
