@@ -11,15 +11,15 @@
 {% for skill in skills %}
     <li>
     {% if skill == "python" %}
-        [backend] {{ skill }}
+        <span style="color:gray">[backend] {{ skill }}</span>
     {% elif skill == "sql" %}
-        [DB] {{ skill }}
+        <span style="color:purple">[DB] {{ skill }}</span>
     {% elif skill == "html" %}
-        {{ skill }}
+        <span style="color:orange">{{ skill }}</span>
     {% elif skill == "bash" %}
-        {{ skill }}
+        <span style="color:green">{{ skill }}</span>
     {% else %}
-        [ETC] {{ skill }}
+        <span style="color:black">[ETC] {{ skill }}</span>
     {% endif %}
     </li>
 {% endfor %}
