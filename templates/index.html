@@ -2,15 +2,17 @@
 <html>
 <body>
 
-<form action="/add" method="POST">
+<form action="/add" method="POST">  
+    <!-- 입력한 데이터를 /add란주소로 POST방식을 통해 보내겠다는 설정. -->
     <input type="text" name="skill">
     <button>추가</button>
 </form>
 
 <ul>
-{% for skill in skills %}
+{% for skill in skills %} 
+<!-- skills 리스트안에 있는값을 하나씩꺼내 skill에 넣으며 반복하는것 -->
     <li>
-    {% if skill == "python" %}
+    {% if skill == "python" %} 
         <span style="color:gray">[backend] {{ skill }}</span>
     {% elif skill == "sql" %}
         <span style="color:purple">[DB] {{ skill }}</span>
